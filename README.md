@@ -48,7 +48,7 @@
 
 ### 📂 Image List Panel
 
-<img src="image.png" alt="Description of Image" width="50%">
+<img src="image.png" alt="Description of Image" width="70%">
 
 
 - Displays image thumbnails and file names
