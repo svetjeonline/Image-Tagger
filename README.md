@@ -48,7 +48,7 @@
 
 ### 📂 Image List Panel
 
-![List Panel](https://i.imgur.com/your_list_panel_screenshot.png)
+![Description of Image](image.png)
 
 - Displays image thumbnails and file names
 - Shows processing status indicators
