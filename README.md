@@ -1,100 +1,109 @@
-# Image-Tagger
-# AI Image Tagger & Describer
+# 📸 AI Image Tagger & Describer 🏷️  
+### *Smart metadata for your image library. Automated. Local. Fast.*
 
-## Overview
+---
 
-The AI Image Tagger & Describer is a desktop application designed to help you automatically generate English captions and keywords for your images using AI, and write this metadata to IPTC/XMP.  This is useful for organizing, cataloging, and improving the searchability of your image libraries.
+## 🚀 Overview
 
-## Features
+**AI Image Tagger & Describer** is a cross-platform desktop application that automatically generates **captions** and **keywords** for your images using AI — and embeds this data into **IPTC/XMP metadata**.
 
-* **AI-Powered Captioning and Keyword Generation:** Uses the Salesforce BLIP model (Base or Large) via Hugging Face Transformers.
-* **Metadata Writing:** Writes generated (and edited) captions and keywords to IPTC and XMP metadata within the image files.
-* **Cross-Platform Compatibility:** Built with Python and Tkinter, should run on Windows, macOS, and Linux.
-* **User-Friendly Interface:**
-    * Image List Panel with status indicators and selection checkboxes.
-    * Detail Panel with large preview and editable metadata fields.
-* **Settings Dialog:** Customize AI model, processing device (CPU/GPU), metadata writing options, and stop words.
-* **Batch Processing:** Generate and save metadata for multiple images at once.
-* **Logging:** Detailed logging to both a file and the GUI log textbox.
-* **Error Handling:** Robust error handling with informative message boxes.
-* **Virtual Environment:** Uses a virtual environment to manage dependencies.
+🔍 Ideal for photographers, archivists, and content creators who manage large image libraries.  
+🧠 Works offline — your images stay on your machine.
 
-## Key Technologies
+---
 
-* Python 3.9+
-* CustomTkinter
-* Hugging Face Transformers (BLIP)
-* PyTorch (optional, for GPU acceleration)
-* iptcinfo3 (for IPTC metadata)
-* python-xmp-toolkit (for XMP metadata)
-* libexempi (system library for XMP)
+## 🌟 Key Features
 
-## Application Interface
-The application is divided into two main panels:
+- 🧠 **AI-Powered Captions & Keywords**  
+  Uses Salesforce's BLIP model (Base or Large) via Hugging Face Transformers
+- ✍️ **Embedded Metadata**  
+  Writes data directly into IPTC and XMP fields inside image files
+- 💻 **Cross-Platform**  
+  Works on Windows, macOS, and Linux
+- 🖼️ **User-Friendly Interface**  
+  Features image list, preview panel, and editable metadata fields
+- ⚙️ **Fully Customizable Settings**  
+  Select AI model, device (CPU/GPU), stop words, and metadata options
+- ⚡ **Batch Processing**  
+  Tag and save metadata for multiple images in one go
+- 📝 **Logging & Error Handling**  
+  Includes detailed logs and friendly error messages
+- 📦 **Virtual Environment Support**  
+  Keeps your dependencies clean and isolated
 
-### List Panel
-* Displays a list of images from the selected folder
-* Shows a small thumbnail preview of each image
-* Displays the name of each image
-* Shows processing status for each image
-* Checkbox to select images for processing
+---
 
-### Detail Panel
-* Displays a larger preview of the selected image
-* Shows existing metadata
-* Shows AI generated and editable metadata
-* Save button to save the metadata of the selected image
+## 🧰 Technologies Used
 
-## How it Works
+- `Python 3.9+`
+- `CustomTkinter` for GUI
+- `Hugging Face Transformers` (BLIP model)
+- `PyTorch` (optional for GPU acceleration)
+- `iptcinfo3` for IPTC metadata
+- `python-xmp-toolkit` and `libexempi` for XMP metadata
 
-1.  **Image Loading:** The application scans a selected folder for supported image files (JPG, JPEG, TIFF).
-2.  **Metadata Reading:** Existing IPTC and XMP metadata is read from the image files.
-3.  **AI Processing:**
-    * The BLIP model generates an English caption and keywords for each selected image.
-4.  **Metadata Writing:**
-    * The generated (or edited) metadata is written back to the image files as IPTC and/or XMP metadata, according to user settings.
+---
 
-## Setup Instructions
+## 🖥️ Application Interface
 
-### Prerequisites
+### 📂 Image List Panel
 
-* **Python:** Python 3.9 or later is required.  Make sure  "Add Python to PATH" is checked during installation.
-* **pip:** Python's package installer.  Usually included with Python.
-* **C++ Build Tools:** If you encounter errors during the installation of python-xmp-toolkit, you might need to install Microsoft Visual C++ Build Tools.
-* **Exempi:** The Exempi library is required for XMP metadata handling.  The application attempts to install this automatically on Windows using Conda, but manual installation may be required.
+![List Panel](https://i.imgur.com/your_list_panel_screenshot.png)
 
-### Installation Steps
+- Displays image thumbnails and file names
+- Shows processing status indicators
+- Checkboxes for batch selection
 
-1.  **Download the repository:** Clone the repository to your local machine.
-2.  **Create a virtual environment:** Open a command prompt or terminal, navigate to the project directory, and run:
-    ```bash
-    python -m venv .venv
-    ```
-3.  **Activate the virtual environment:**
-    * On Windows, run:
-        ```bash
-        .venv\Scripts\activate
-        ```
-4.  **Install dependencies:** In the activated virtual environment, run:
-        ```bash
-        pip install -r requirements.txt
-        ```
-5.  **Install Exempi (Windows):**
-    * The application will try to install Exempi automatically using Conda. If this fails, follow the manual installation instructions provided by the application.
-    * Manual installation involves downloading a pre-built binary, extracting it, and adding the path to the system PATH environment variable.
-6.  **Run the application:** In the activated virtual environment, run:
-    ```bash
-    python main.py
-    ```
+---
 
-##  Screenshots
-[Include screenshots of the application's main window, settings dialog, and about dialog]
+### 🖼️ Detail Panel
 
-##  License
-[Specify the license under which the project is released]
+![Detail Panel](https://i.imgur.com/your_detail_panel_screenshot.png)
 
-##  Contributions
-[State if you accept contributions and how to contribute]
+- Large preview of the selected image
+- Editable caption and keywords
+- Save button to update metadata
 
-##  Credits
-[Acknowledge any libraries, frameworks, or resources used]
+---
+
+## ⚙️ How It Works
+
+1. **📂 Load Folder** – The app scans a selected directory for supported image files (JPG, JPEG, TIFF).
+2. **📖 Read Metadata** – IPTC and XMP metadata is extracted if available.
+3. **🤖 AI Tagging** – BLIP generates English captions and keywords.
+4. **✍️ Write Metadata** – Results are written back into the image files.
+
+---
+
+## 🔧 Setup Instructions
+
+### ✅ Prerequisites
+
+- **Python 3.9+**
+- `pip` (included with Python)
+- **Visual C++ Build Tools** (needed if `python-xmp-toolkit` install fails)
+- **Exempi** (required for XMP support, auto-installed via Conda or manual)
+
+---
+
+### 🛠️ Installation Guide
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/yourrepository.git
+cd yourrepository
+
+# 2. Create a virtual environment
+python -m venv .venv
+
+# 3. Activate the virtual environment
+# Windows:
+.venv\Scripts\activate
+# macOS/Linux:
+source .venv/bin/activate
+
+# 4. Install dependencies
+pip install -r requirements.txt
+
+# 5. Run the application
+python main.py
