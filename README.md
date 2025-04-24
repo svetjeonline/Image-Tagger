@@ -48,7 +48,8 @@
 
 ### 📂 Image List Panel
 
-![Description of Image](image.png)
+<img src="image.png" alt="Description of Image" width="50%">
+
 
 - Displays image thumbnails and file names
 - Shows processing status indicators
@@ -58,7 +59,7 @@
 
 ### 🖼️ Detail Panel
 
-![Detail Panel](https://i.imgur.com/your_detail_panel_screenshot.png)
+
 
 - Large preview of the selected image
 - Editable caption and keywords
