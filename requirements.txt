@@ -1,0 +1,6 @@
+customtkinter
+Pillow
+transformers
+torch
+iptcinfo3
+python-xmp-toolkit
